@@ -15,7 +15,7 @@ RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --ignor
 
 FROM php:8.3-cli-bookworm
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-RUN install-php-extensions gd mbstring zip bcmath pdo_sqlite opcache
+RUN install-php-extensions gd mbstring zip bcmath pdo_sqlite opcache intl
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
