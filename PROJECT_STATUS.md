@@ -56,7 +56,7 @@ php artisan test                   # backend tests
 
 ## Public demo mode
 
-`DOCAI_PUBLIC_DEMO=true`: one-click reviewer login, password login off, demo parser forced, upload caps, `docai:demo-reset`. Tested by `PublicDemoTest` and `DemoResetTest`. The `Dockerfile`, `docker/entrypoint.sh` and `render.yaml` have **not been built or run** (no Docker on the build machine). See `docs/DEPLOY_DEMO.md`.
+`DOCAI_PUBLIC_DEMO=true`: one-click reviewer login, password login off, demo parser forced, upload caps, `docai:demo-reset`. Tested by `PublicDemoTest` and `DemoResetTest`. The `Dockerfile`, `docker/entrypoint.sh` and `render.yaml` were built and run on Render (free plan): login, pages, PDFs and exports checked live. A missing `intl` extension caused a 500 on the first deploy and was fixed. See `docs/DEPLOY_DEMO.md`.
 
 ## Portfolio readiness
 

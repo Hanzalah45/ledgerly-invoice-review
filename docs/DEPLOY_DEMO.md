@@ -26,7 +26,7 @@ Set `DOCAI_PUBLIC_DEMO=true` (the Docker image does this) and the app changes:
 - The free plan sleeps after about 15 minutes idle; the next visit takes around a minute. Say so in your proposal.
 - Storage is ephemeral: SQLite and uploads are lost on every restart. That is intentional for a demo, since it resets anyway.
 - It runs `php artisan serve` (single process). Fine for a client clicking around, not for load.
-- **This Docker setup has not been built or run by the author** (Docker was not available on the build machine). The application behaviour is covered by tests (`PublicDemoTest`, `DemoResetTest`), but the first Render build may need a small fix. Check the build log.
+- **Verified on Render (free plan, 2026-10-29).** The image built and the demo ran: one-click login, dashboard, document review pages, PDF and CSV/JSON exports. The first deploy returned a 500 on the dashboard because the `intl` PHP extension was missing from the image (Laravel's currency formatter needs it); it is now installed. No Docker on the build machine, so the image was built by Render, not locally. Free instances sleep after about 15 minutes and take around a minute to wake.
 
 ## Alternative without hosting
 

@@ -87,7 +87,7 @@ documents are labelled with the provider and model. Never paste an API key into 
 
 ## Public demo (optional)
 
-`DOCAI_PUBLIC_DEMO=true` turns the app into a safe showcase: one-click reviewer login, demo parser only (no API key used), small upload caps, daily reset via `php artisan docai:demo-reset`. A `Dockerfile` and `render.yaml` are included (untested build, see [docs/DEPLOY_DEMO.md](docs/DEPLOY_DEMO.md)).
+`DOCAI_PUBLIC_DEMO=true` turns the app into a safe showcase: one-click reviewer login, demo parser only (no API key used), small upload caps, daily reset via `php artisan docai:demo-reset`. A `Dockerfile` and `render.yaml` are included (deployed and checked on Render's free plan, see [docs/DEPLOY_DEMO.md](docs/DEPLOY_DEMO.md)).
 
 ## For larger companies (approval chains, coding, email intake)
 
