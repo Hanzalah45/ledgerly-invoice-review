@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ledgerly-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /up
+    envVars:
+      - key: DOCAI_PUBLIC_DEMO
+        value: "true"
+      - key: APP_NAME
+        value: Ledgerly

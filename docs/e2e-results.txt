@@ -1,0 +1,84 @@
+﻿PASS  Wrong password shows an error and stays on login
+PASS  Reviewer can sign in
+PASS  Dashboard renders KPI strip
+PASS  Reviewer does not see Settings in the sidebar
+PASS  Sidebar: Documents opens
+PASS  Sidebar: Upload opens
+PASS  Sidebar: Exports opens
+PASS  Sidebar: Activity opens
+PASS  Sidebar: Dashboard opens
+PASS  Upload rejects a .txt file in the browser
+PASS  Upload accepts a valid PDF and enables the button
+PASS  Upload processes and opens the document  -> http://127.0.0.1:8000/documents/4b7b16c7-2436-48a8-a6f7-2e2412e9f36b
+PASS  New invoice is "Ready to approve" with no validation errors
+PASS  Fields were extracted from the PDF  -> total=748.80
+PASS  Demo parser is labelled as not AI
+PASS  PDF preview iframe is present
+PASS  Extracted text tab shows the PDF text
+PASS  Order details extracted: PO number, terms, tax ID, bill-to
+PASS  Supplier and billing addresses are multi-line fields
+PASS  Line items carry SKUs
+PASS  PO match panel shows the register entry as matching
+PASS  Assigning the document to a reviewer works
+PASS  Reviewer note is saved and shown
+PASS  Save button enables after an edit
+PASS  Live cross-check strip flags the mismatch
+PASS  Saved edit is re-validated: total mismatch error shown
+PASS  Approve is disabled while errors exist
+PASS  Document status moved to Needs review
+PASS  Correcting the total clears the error  -> Changes saved and the document was validated again.
+PASS  Edited field is marked Verified
+PASS  Add line adds a row
+PASS  Remove line removes it
+PASS  Approve (with confirmation dialog) marks it Approved
+PASS  Approved document fields are read-only
+PASS  Bank account is masked on an approved record
+PASS  Approval record downloads as a PDF  -> approval-record-e2e-1001.pdf
+PASS  Reopen returns it to review
+PASS  Reject records the reason
+PASS  Reprocess re-runs extraction
+PASS  Reviewer has no Delete button
+PASS  Purchase order register lists the seeded POs with invoiced usage
+PASS  New purchase order is added (comma amount accepted)
+PASS  PO can be closed
+PASS  Reviewer cannot delete a PO (no button)
+PASS  Suppliers page lists suppliers with invoice counts
+PASS  Supplier search narrows the list
+PASS  Bulk bar is hidden until something is selected
+PASS  Selecting rows shows the bulk bar with a count
+PASS  "Export selected" link carries the chosen ids
+PASS  Bulk assign reports the result  -> Assigned 2 document(s).
+PASS  Select-all ticks every row on the page
+PASS  Clear selection hides the bar again
+PASS  Global search finds the supplier
+PASS  Status filter shows only Needs review
+PASS  Sorting by Total works
+PASS  Validation filter (has errors) works
+PASS  CSV export downloads approved records
+PASS  JSON export is valid and flags demo data
+PASS  Activity log records approve/reject/export
+PASS  Settings returns 403 for a reviewer
+PASS  Sign out returns to login
+PASS  Admin sees Settings
+PASS  Settings shows providers and members without any API key
+PASS  Logo upload appears in the sidebar and loads
+PASS  SVG logo is refused with a clear message
+PASS  Approval threshold saved
+PASS  Reviewer sees "Admin approval required" above the threshold
+PASS  Admin can delete a document (with confirmation)  -> before=1
+PASS  Viewer has no Upload link
+PASS  Viewer is blocked from the upload page (403)
+PASS  Viewer sees no Approve / Reject / Reprocess / Save
+PASS  Viewer can still read the validation messages
+PASS  Mobile: sidebar is hidden by default
+PASS  Mobile: menu button opens the sidebar
+PASS  Mobile: navigation works
+PASS  Mobile: no page-level horizontal overflow on /dashboard  -> overflow=0px
+PASS  Mobile: no page-level horizontal overflow on /documents  -> overflow=0px
+PASS  Mobile: no page-level horizontal overflow on /documents/upload  -> overflow=0px
+PASS  Mobile: no page-level horizontal overflow on /exports  -> overflow=0px
+PASS  Mobile: no page-level horizontal overflow on /activity  -> overflow=0px
+PASS  No unexpected browser console errors during the whole run
+(ignored 2 expected 403 console messages from the permission checks)
+
+81/81 checks passed
